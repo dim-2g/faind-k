@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/template/vendor/owlcarousel/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/template/vendor/owlcarousel/owl.theme.default.css">
+    <link rel="stylesheet" href="/assets/template/vendor/scroller/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="/assets/template/css/main.css">
+
+</head>
+<body>
+
+<div class="header-box">
+    <div class="topline">
+        <div class="container">
+            <div class="topline__grid">
+                <div class="topline__address">
+                    Санкт-Петербург, Б.Сампсониевский пр., д. 82, оф. 1
+                </div>
+                <div class="topline__menu">
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Полезное</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="container">
+            <div class="header__body">
+                <div class="header__logo">
+                    <div class="logo">
+                        <div class="logo__image">
+                            <img src="/assets/template/images/logo.jpg" alt="">
+                        </div>
+                        <div class="logo__content">
+                            <div class="logo__header">
+                                ЗАО “Файнд-К”
+                            </div>
+                            <div class="logo__info">
+                                Все виду гофрокартона,<br />
+                                оптом и в розницу
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__phones">
+                    <a href="tel:88125917211" class="header__phone">8 (812) 591 72 11</a>
+                    <a href="tel:88125917210" class="header__phone">8 (812) 591 72 10</a>
+                    <a href="tel:88125917100" class="header__phone">8 (812) 591 71 00</a>
+                </div>
+                <div class="header__callback">
+                    <a href="#" class="btn-o">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="container">
+            <div class="nav__grid">
+                <ul class="topmenu">
+                    <li class="submenu">
+                        <a href="#">Гофрокартон</a>
+
+                    </li>
+                    <li><a href="#">Гофроупаковка</a></li>
+                    <li><a href="#">Гидрофобная добавка</a></li>
+                    <li><a href="#">Услуги</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__body">
+            <ul>
+                <li><a href="/menu.html">Главная страница</a></li>
+                <li><span>Оглавление</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="textpage">
+    <div class="container">
+        <div class="textpage__body stext fix-height">
+            <h1>Оглавление</h1>
+            <h2>Верстка страниц</h2>
+            <ul>
+                <li><a href="/index.html">Главная страница</a></li>
+                <li><a href="/catalog.html">Каталог</a></li>
+                <li><a href="/product.html">Карточка товара</a> всплывающее окно</li>
+                <li><a href="/cart.html">Корзина</a></li>
+                <li><a href="/contacts.html">Контакты</a></li>
+                <li><a href="/articles.html">Каталог статей</a></li>
+                <li><a href="/article.html">Карточка статьи</a></li>
+                <li><a href="/company.html">О компании</a> !!! преимущества поправить, проверить адаптив</li>
+                <li><a href="/text.html">Текстовая страница (доставка, ПК и т.д.</a></li>
+                <li><a href="/search.html">Результаты поиска</a></li>
+                <li><a href="/404.html">404</a></li>
+                <li><a href="/services.html">Услуги</a></li>
+            </ul>
+            <h2>Всплывающие окна</h2>
+            <ul>
+                <li><a href="#thankyou" data-fancybox="">Спасибо за Ваш заказ</a></li>
+                <li><a href="#oneclick" data-fancybox="">Купить в 1 клик</a></li>
+                <li><a href="#addproduct" data-fancybox="">Товар добавлен в корзину</a></li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>
+
+
+<div style="display: none;">
+    <div id="thankyou" class="thankyou-popup">
+        <div class="thankyou-popup__header">
+            Спасибо за Ваш заказ!
+        </div>
+        <div class="thankyou-popup__body">
+            Наш менеджер свяжется с вами в течение <nobr>30 минут</nobr> в рабочее время.<br />
+            Мы работаем с понедельника по пятницу с 09.00 до 18.00.
+        </div>
+    </div>
+
+    <div id="addproduct" class="addproduct-popup">
+        <div class="addproduct-popup__text">
+            <div class="addproduct-popup__name">Стиральная машина Bosch Serie 2</div>
+            успешно добавлен(а) в корзину
+        </div>
+        <div class="addproduct-popup__actions">
+            <a href="" class="btn-o" data-fancybox-close="">Продолжить покупки</a>
+            <a href="/cart.html" class="btn">Оформить заказ</a>
+        </div>
+    </div>
+
+    <div id="oneclick" class="oneclick-popup">
+        <div class="oneclick-popup__header">Купить в 1 клик</div>
+        <div class="oneclick-popup__body">
+            <div class="oneclick-popup__name">Стиральная машина Bosch Serie 2</div>
+            <div class="oneclick-popup__grid">
+                <div class="oneclick-popup__left">
+                    <div class="oneclick-popup__image" style="background-image: url('/assets/template/images/products/product-2.png')">
+
+                    </div>
+                    <div class="oneclick-popup__info">
+                        Чтобы оформить заказ, заполните форму. В течение 30 минут (в рабочее время) с вами
+                        свяжется менеджер и уточнит детали заказа, а также время доставки.
+                    </div>
+                </div>
+                <div class="oneclick-popup__right">
+                    <div class="oneclick-form">
+                        <form action="">
+                            <div class="oneclick-form__item">
+                                <div class="oneclick-form__label">Имя*</div>
+                                <div class="oneclick-form__input">
+                                    <input type="text" name="name" placeholder="">
+                                </div>
+                            </div>
+                            <div class="oneclick-form__item">
+                                <div class="oneclick-form__label">Телефон*</div>
+                                <div class="oneclick-form__input">
+                                    <input type="text" name="phone" placeholder="" data-mask="+7 (999) 999-99-99">
+                                </div>
+                            </div>
+                            <div class="oneclick-form__item">
+                                <div class="oneclick-form__label">Email</div>
+                                <div class="oneclick-form__input">
+                                    <input type="text" name="email" placeholder="">
+                                </div>
+                            </div>
+                            <div class="oneclick-form__item oneclick-form__item--address">
+                                <div class="oneclick-form__label">Адрес доставки <span class="oneclick-form__hint">(при необходимости)</span></div>
+                                <div class="oneclick-form__input">
+                                    <input type="text" name="street" placeholder="">
+                                </div>
+                            </div>
+                            <div class="oneclick-form__button">
+                                <button class="btn">Купить</button>
+                            </div>
+                            <div class="oneclick-form__privacy">
+                                Нажимая на кнопку, Вы даете согласие на обработку персональных данных и соглашаюсь
+                                с <a href="">Политикой конфиденциальности</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="oneclick-form__privacy-mobile">
+                Нажимая на кнопку, Вы даете согласие на обработку персональных данных и соглашаюсь
+                с <a href="">Политикой конфиденциальности</a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="footer"></div>
+
+<!--
+<link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="/assets/template/vendor/slick/slick-theme.css"/>
+-->
+<link rel="stylesheet" href="/assets/template/vendor/fancybox/jquery.fancybox.min.css" />
+<link href="/assets/template/vendor/formstyler/jquery.formstyler.css" rel="stylesheet" />
+<link href="/assets/template/vendor/formstyler/jquery.formstyler.theme.css" rel="stylesheet" />
+<script src="/assets/template/vendor/jquery-3.2.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/assets/template/vendor/formstyler/jquery.formstyler.min.js"></script>
+
+<script src="/assets/template/vendor/jquery.inputmask.bundle.js"></script>
+<script src="/assets/template/vendor/owlcarousel/owl.carousel.js"></script>
+<script src="assets/template/vendor/fancybox/jquery.fancybox.min.js"></script>
+<script src="/assets/template/vendor/scroller/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/assets/template/js/scripts.js"></script>
+</body>
+</html>
+
+<div class="bp-larger-than">
+    <div class="bp-larger-than-first">
+        
+    </div>
+    <div class="bp-larger-than-iphone5">
+        @media ($bp-larger-than-iphone5) {}
+    </div>
+    <div class="bp-larger-than-iphone6">
+        @media ($bp-larger-than-iphone6) {}
+    </div>
+    <div class="bp-larger-than-mobile">
+        @media ($bp-larger-than-mobile) {}
+    </div>
+    <div class="bp-larger-than-phablet">
+        @media ($bp-larger-than-phablet) {}
+    </div>
+    <div class="bp-larger-than-tablet">
+        @media ($bp-larger-than-tablet) {}
+    </div>
+    <div class="bp-larger-than-desktop">
+        @media ($bp-larger-than-desktop) {}
+    </div>
+    <div class="bp-larger-than-desktophd">
+        @media ($bp-larger-than-desktophd) {}
+    </div>
+    <div class="bp-larger-than-note">
+        @media ($bp-larger-than-note) {}
+    </div>
+    <div class="bp-larger-than-desktopfullhd">
+        @media ($bp-larger-than-desktopfullhd) {}
+    </div>
+    <div class="now-width__wrap">width: <span class="now-width"></span>px</div>
+</div>
+<script>
+    (setWidth = function() {
+        var width = jQuery(window).width();
+        jQuery('.now-width').text(width);
+    })();
+    jQuery(window).resize(function(){
+        setWidth();
+    });
+</script>
