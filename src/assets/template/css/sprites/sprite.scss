@@ -9,6 +9,17 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
+$mail-name: 'mail';
+$mail-x: 0px;
+$mail-y: 26px;
+$mail-offset-x: 0px;
+$mail-offset-y: -26px;
+$mail-width: 16px;
+$mail-height: 10px;
+$mail-total-width: 42px;
+$mail-total-height: 36px;
+$mail-image: '/assets/template/css/sprites/sprite.png';
+$mail: (0px, 26px, 0px, -26px, 16px, 10px, 42px, 36px, '/assets/template/css/sprites/sprite.png', 'mail', );
 $next-price-slider-name: 'next-price-slider';
 $next-price-slider-x: 0px;
 $next-price-slider-y: 0px;
@@ -16,10 +27,21 @@ $next-price-slider-offset-x: 0px;
 $next-price-slider-offset-y: 0px;
 $next-price-slider-width: 14px;
 $next-price-slider-height: 26px;
-$next-price-slider-total-width: 28px;
-$next-price-slider-total-height: 26px;
+$next-price-slider-total-width: 42px;
+$next-price-slider-total-height: 36px;
 $next-price-slider-image: '/assets/template/css/sprites/sprite.png';
-$next-price-slider: (0px, 0px, 0px, 0px, 14px, 26px, 28px, 26px, '/assets/template/css/sprites/sprite.png', 'next-price-slider', );
+$next-price-slider: (0px, 0px, 0px, 0px, 14px, 26px, 42px, 36px, '/assets/template/css/sprites/sprite.png', 'next-price-slider', );
+$phone-name: 'phone';
+$phone-x: 28px;
+$phone-y: 0px;
+$phone-offset-x: -28px;
+$phone-offset-y: 0px;
+$phone-width: 14px;
+$phone-height: 13px;
+$phone-total-width: 42px;
+$phone-total-height: 36px;
+$phone-image: '/assets/template/css/sprites/sprite.png';
+$phone: (28px, 0px, -28px, 0px, 14px, 13px, 42px, 36px, '/assets/template/css/sprites/sprite.png', 'phone', );
 $prev-price-slider-name: 'prev-price-slider';
 $prev-price-slider-x: 14px;
 $prev-price-slider-y: 0px;
@@ -27,15 +49,15 @@ $prev-price-slider-offset-x: -14px;
 $prev-price-slider-offset-y: 0px;
 $prev-price-slider-width: 14px;
 $prev-price-slider-height: 26px;
-$prev-price-slider-total-width: 28px;
-$prev-price-slider-total-height: 26px;
+$prev-price-slider-total-width: 42px;
+$prev-price-slider-total-height: 36px;
 $prev-price-slider-image: '/assets/template/css/sprites/sprite.png';
-$prev-price-slider: (14px, 0px, -14px, 0px, 14px, 26px, 28px, 26px, '/assets/template/css/sprites/sprite.png', 'prev-price-slider', );
-$spritesheet-width: 28px;
-$spritesheet-height: 26px;
+$prev-price-slider: (14px, 0px, -14px, 0px, 14px, 26px, 42px, 36px, '/assets/template/css/sprites/sprite.png', 'prev-price-slider', );
+$spritesheet-width: 42px;
+$spritesheet-height: 36px;
 $spritesheet-image: '/assets/template/css/sprites/sprite.png';
-$spritesheet-sprites: ($next-price-slider, $prev-price-slider, );
-$spritesheet: (28px, 26px, '/assets/template/css/sprites/sprite.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($mail, $next-price-slider, $phone, $prev-price-slider, );
+$spritesheet: (42px, 36px, '/assets/template/css/sprites/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
 //

@@ -1,0 +1,24 @@
+.article{
+  max-width: 754px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  &__image{
+    margin-bottom: 20px;
+    img{
+      width: 100%;
+      height: 231px;
+      object-fit: cover;
+      @media ($bp-larger-than-phablet) {
+        height: 220px;
+      }
+    }
+  }
+  .stext{
+    padding-right: 0;
+    text-align: justify;
+    p{
+      line-height: 18px;
+    }
+  }
+}
