@@ -11,10 +11,22 @@ $(function() {
     //сворачивание мобильного меню
     $('.toggle-menu-js').on('click', function (e) {
         e.preventDefault();
+        $('body').removeClass('show-phones-menu')
         if ($('body').hasClass('show-slide-menu')) {
             $('body').removeClass('show-slide-menu')
         } else {
             $('body').addClass('show-slide-menu')
+        }
+    });
+
+    //сворачивание меню с телефонами
+    $('.toggle-phones-menu-js').on('click', function (e) {
+        e.preventDefault();
+        $('body').removeClass('show-slide-menu')
+        if ($('body').hasClass('show-phones-menu')) {
+            $('body').removeClass('show-phones-menu')
+        } else {
+            $('body').addClass('show-phones-menu')
         }
     });
 
@@ -46,13 +58,29 @@ $(function() {
                 ul.stop(true, true);
                 parent.removeClass('active')
             });
-
         } else {
             ul.slideDown(300, function() {
                 ul.stop(true, true);
                 parent.addClass('active');
             });
+        }
+    });
 
+    //разворачивание второго уровня мобильного меню
+    $('body').on('click', '.mobmenu__arrow', function(e) {
+        e.preventDefault();
+        var parent = $(this).closest('li');
+        var ul = parent.find('ul');
+        if (parent.hasClass('open')) {
+            ul.slideUp(300, function() {
+                ul.stop(true, true);
+                parent.removeClass('open')
+            });
+        } else {
+            ul.slideDown(300, function() {
+                ul.stop(true, true);
+                parent.addClass('open');
+            });
         }
     });
 
