@@ -120,19 +120,19 @@ $(function() {
     });
 
     //инициализация верхнего слайдера
-    initMainSlider();
+    //initMainSlider();
     //инициализация слайдера у товара
-    initProductSlider();
+    //initProductSlider();
     //инициализация слайдера похожих статей
-    initRelatedArticles();
+    //initRelatedArticles();
     //инициализация всех табов
     //initXtab();
     //установка высоты плавающего хедера
-    setHeaderHeight();
+    //setHeaderHeight();
     //установка высоты страницы 404
-    initErrorPageHeigth();
+    //initErrorPageHeigth();
     //установка видимости кнопки наверх
-    initGotoTopButton();
+    //initGotoTopButton();
 
     //показ всех товаров в каталоге при клике на "Показать еще"
     $('body').on('click', '.more-js', function(e) {
@@ -141,81 +141,11 @@ $(function() {
         $(this).addClass('hidden');
     });
 
-    $('body').on('click', '.about-faq__item', function() {
-        var item = $(this);
-        $('.about-faq__item.active').find('.about-faq__answer').slideUp(400, function() {
-            $(this).closest('.about-faq__item').removeClass('active');
-        });
-        $(this).find('.about-faq__answer').slideDown(400, function() {
-            item.addClass('active');
-        });
-
-        //$(this).toggleClass('active');
-    });
-
     $('select.styler').styler();
     $('.checkbox-styler').styler();
 
-    //скрываем фильтр при нажатии на крестик
-    $('body').on('click', '.catalog-filter-button, .sidebar-close', function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        var sidebar = $('.catalog__sidebar');
-        var overlay = $('.overlay-light');
-        if (sidebar.hasClass('open')) {
-            sidebar.removeClass('open');
-            setTimeout(function() {
-                overlay.hide();
-
-            }, 150);
-
-        } else {
-            sidebar.addClass('open');
-            overlay.show();
-        }
-    });
-
-    //прокрутка к верху страницы
-    $('body').on('click', '.goto-top', function(e) {
-        e.preventDefault();
-        $('body,html').animate({
-            scrollTop: 0,
-        }, 700);
-    });
-
-    $('body').on('change', '.service-attach input[type="file"]', function() {
-        var file = $(this).val();
-        file = file.replace(/\\/g, "/").split('/').pop();
-        console.log('file ' + file);
-        $(this).parents('.service-attach').find('.service-attach__text').text(file);
-    });
-
-    //купить в 1 клик
-    $('body').on('click', '[href="#oneclick"]', function(e) {
-        e.preventDefault();
-        var productId = $(this).attr('data-product-id');
-        setOneClickData($(this));
-        $.fancybox.open({
-            src  : $(this).attr('href'),
-            type : 'inline',
-            smallBtn : false,
-            opts : {
-                afterLoad : function(instance, current) {
-                    oneClickInit(productId);
-                }
-            }
-        });
-    });
-
-    //переход на страницу об успешном заказе
-    $(document).on('af_complete', function(event, response) {
-        if (response.form.hasClass('af_quick_buy')) {
-            if( response.success ) {
-                document.location.href = response.data.order_url;
-            }
-        }
-    });
-
+    //устанавливаем координаты выпадающего списка с телефонами
+    setPositionPhonesMenu();
     //устанавливаем заголовок модального окна
     $('body').on('click', '[data-product-name]', function() {
         var productName = $(this).attr("data-product-name");
@@ -225,24 +155,11 @@ $(function() {
 
 });
 
-var oneClickInit = function(id) {
-    $.get(
-        "/",
-        { ms2_action: "cart/clean" },
-        function(data){
-            var jo = $.parseJSON(data);
-            if(jo.success){
-                $("#msMiniCart").removeClass('full');
-                //$('.product-info__buttons .ms2_form').trigger('submit');
-                $.post({
-                    url: "/assets/components/minishop2/action.php",
-                    data: "id=" + id + "&count=1&ms2_action=cart/add&ctx=web",
-                    success: function(msg){
-                    }
-                });
-            }
-        }
-    );
+var setPositionPhonesMenu = function() {
+    var etalon = $('.header-mobile__phone');
+    var menu = $('.phones-menu');
+    var left = etalon.offset().left - 12;
+    menu.css({"left": left});
 };
 
 var setOneClickData = function(elem) {
@@ -376,7 +293,9 @@ var resizedw = function(){
     //setCountProducts();
     //setHeaderHeight();
     //setFixedHeader();
-    $('body').removeClass('show-slide-menu')
+    $('body').removeClass('show-slide-menu');
+    $('body').removeClass('show-phones-menu');
+    setPositionPhonesMenu();
     //$('.mobile-menu').slideUp();
 };
 
