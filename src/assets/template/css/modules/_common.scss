@@ -460,16 +460,28 @@ button{
     font-size: 12px;
     line-height: 14px;
     color: #1D1D1D;
-    padding-right: 12px;
+    padding-right: 18px;
     position: relative;
     @media ($bp-larger-than-iphone6) {
-      padding-right: 15px;
+      padding-right: 18px;
       font-size: 14px;
       line-height: 16px;
     }
     @media ($bp-larger-than-phablet) {
       font-size: 18px;
       line-height: 21px;
+    }
+
+  }
+  &__phone-arrow{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    @media ($bp-larger-than-iphone6) {
+      top: 1px;
     }
     &:before{
       content: "";
@@ -480,7 +492,7 @@ button{
       position: absolute;
       transform: rotate(45deg);
       top: 1px;
-      right: 0;
+      left: 3px;
       @media ($bp-larger-than-iphone6) {
         top: 2px;
       }
@@ -734,32 +746,51 @@ body.show-slide-menu{
 
 .phones-menu {
   position: absolute;
-  background-color: $dark-red;
+  background-color: #8D4245;
   transform: translateY(-100%);
   top: 56px;
   left: 0;
-  right: 0;
-  transition: $cubic;
+  width: 135px;
+  transition: transform 0.5s cubic-bezier(0.3, 0, 0.2, 1);
   z-index: 2;
+  @media ($bp-larger-than-iphone6) {
+    width: 150px;
+  }
+  @media ($bp-larger-than-phablet) {
+    width: 180px;
+  }
 }
 body.show-phones-menu{
   .phones-menu{
     transform: translateY(0);
   }
-  .header-mobile__phone{
+  .header-mobile__phone-arrow{
     &:before{
       transform: rotate(-135deg);
-      top: 6px;
+      top: 4px;
     }
   }
 }
 .phonemenu{
-  margin: 10px 0 10px 0;
+  margin: 5px 0 5px 0;
   padding: 0;
   list-style-type: none;
   li {
     margin: 0;
     padding: 0;
+    position: relative;
+    & + li {
+      &:before{
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        top: 0;
+        background-color: #a86f70;
+      }
+    }
     a {
       color: #fff;
       text-decoration: none;
@@ -767,12 +798,16 @@ body.show-phones-menu{
       display: flex;
       align-items: center;
       font-weight: bold;
-      font-size: 14px;
-      line-height: 16px;
+      font-size: 12px;
+      line-height: 14px;
       padding: 0 15px;
       position: relative;
       text-align: center;
       justify-content: center;
+      @media ($bp-larger-than-iphone6) {
+        font-size: 14px;
+        line-height: 16px;
+      }
       &:hover {
         text-decoration: none;
       }
@@ -981,6 +1016,7 @@ body.show-phones-menu{
     display: flex;
     align-items: center;
     height: 112px;
+    justify-content: space-between;
     @media ($bp-larger-than-tablet) {
       height: 112px;
     }
@@ -989,25 +1025,44 @@ body.show-phones-menu{
     flex-shrink: 0;
   }
   &__phones{
-    width: 100%;
     text-align: center;
-    display: none;
+    //display: none;
     flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    @media ($bp-larger-than-phablet) {
+      margin-right: 20px;
+    }
     @media ($bp-larger-than-tablet) {
-      display: flex;
+
     }
     @media ($bp-larger-than-desktop) {
+      margin-right: 0px;
+      width: 100%;
       flex-direction: row;
       justify-content: center;
     }
   }
   &__phone{
     font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 16px;
     color: #1D1D1D;
     position: relative;
     transition: $cubic02;
+    padding-left: 20px;
+    padding-right: 20px;
+    @media ($bp-larger-than-phablet) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    @media ($bp-larger-than-desktop) {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 14px;
+      line-height: 16px;
+    }
     @media ($bp-larger-than-desktophd) {
       font-size: 18px;
       line-height: 21px;
@@ -1026,13 +1081,50 @@ body.show-phones-menu{
         position: absolute;
         top: 5px;
         left: 0;
-        display: block;
-        @media ($bp-larger-than-desktop) {
-
-        }
-        @media ($bp-larger-than-desktophd) {
+        @media ($bp-larger-than-phablet) {
           top: 7px;
         }
+        @media ($bp-larger-than-desktop) {
+          display: block;
+          top: 5px;
+        }
+        @media ($bp-larger-than-desktophd) {
+          top: 6px;
+        }
+      }
+    }
+    &:before{
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $dark-red;
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      display: block;
+      @media ($bp-larger-than-phablet) {
+        top: 7px;
+      }
+      @media ($bp-larger-than-desktop) {
+        display: none;
+      }
+    }
+    &:after{
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $dark-red;
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 0;
+      display: block;
+      @media ($bp-larger-than-phablet) {
+        top: 7px;
+      }
+      @media ($bp-larger-than-desktop) {
+        display: none;
       }
     }
     &:hover{
@@ -1048,6 +1140,58 @@ body.show-phones-menu{
     line-height: 16px;
     color: #1D1D1D;
     @media ($bp-larger-than-tablet) {
+      display: block;
+    }
+  }
+}
+
+.footer-logo{
+  display: flex;
+  //margin-bottom: 8px;
+  @media ($bp-larger-than-phablet) {
+    //margin-bottom: 0;
+  }
+  &__image{
+    img{
+      max-height: 34px;
+      margin-top: 5px;
+      @media ($bp-larger-than-phablet) {
+        margin-top: 0;
+        max-height: 61px;
+      }
+    }
+  }
+  &__content{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media ($bp-larger-than-phablet) {
+      margin-left: 15px;
+    }
+  }
+  &__header{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    @media ($bp-larger-than-iphone6) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @media ($bp-larger-than-phablet) {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 0;
+    }
+  }
+  &__info{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #1D1D1D;
+    display: none;
+    @media ($bp-larger-than-phablet) {
       display: block;
     }
   }
