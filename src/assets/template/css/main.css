@@ -2042,8 +2042,12 @@ body.show-phones-menu .header-mobile__phone:before {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 32px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  @media (min-width: 1000px) {
+    .contacts__top {
+      -ms-flex-direction: row;
+      flex-direction: row; } }
 
 .contacts__left {
   width: 100%;
@@ -2055,12 +2059,16 @@ body.show-phones-menu .header-mobile__phone:before {
       padding-right: 50px; } }
 
 .contacts__right {
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   .contacts__right img {
-    height: 330px;
+    height: 200px;
     -o-object-fit: cover;
     object-fit: cover;
     margin-top: 10px; }
+    @media (min-width: 550px) {
+      .contacts__right img {
+        height: 330px; } }
     @media (min-width: 1200px) {
       .contacts__right img {
         height: 440px; } }
@@ -2072,17 +2080,22 @@ body.show-phones-menu .header-mobile__phone:before {
   flex-wrap: wrap;
   margin-right: -10px;
   margin-left: -10px;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  -ms-flex-pack: center;
+  justify-content: center; }
   @media (min-width: 1200px) {
     .contacts__bottom {
       margin-right: -30px;
-      margin-left: -30px; } }
+      margin-left: -30px;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
 
 .contacts__item {
-  width: 50%;
+  width: 100%;
   padding: 0 10px;
   margin-bottom: 15px; }
+  @media (min-width: 750px) {
+    .contacts__item {
+      width: 50%; } }
   @media (min-width: 1000px) {
     .contacts__item {
       width: 33.33%;
@@ -2099,7 +2112,9 @@ body.show-phones-menu .header-mobile__phone:before {
   text-align: center;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 300; }
+  font-weight: 300;
+  margin-right: auto;
+  margin-left: auto; }
   @media (min-width: 1200px) {
     .contacts__card {
       padding: 40px; } }
@@ -2159,7 +2174,10 @@ body.show-phones-menu .header-mobile__phone:before {
 .contact-department {
   border-bottom: 4px solid #F7F7F7;
   padding-bottom: 17px;
-  margin-bottom: 16px; }
+  margin-bottom: 25px; }
+  @media (min-width: 550px) {
+    .contact-department {
+      margin-bottom: 16px; } }
   .contact-department__header {
     font-weight: normal;
     font-size: 16px;
@@ -2176,10 +2194,18 @@ body.show-phones-menu .header-mobile__phone:before {
     flex-wrap: wrap;
     margin-left: -9px;
     margin-right: -9px;
-    margin-bottom: 14px; }
+    margin-bottom: 2px; }
+    @media (min-width: 550px) {
+      .contact-department__phones {
+        margin-bottom: 14px; } }
   .contact-department__item {
-    width: 33.33%;
-    padding: 0 9px; }
+    width: 50%;
+    padding: 0 9px;
+    margin-bottom: 15px; }
+    @media (min-width: 550px) {
+      .contact-department__item {
+        width: 33.33%;
+        margin-bottom: 0; } }
     .contact-department__item a {
       font-size: 18px;
       line-height: 20px;
@@ -2191,9 +2217,64 @@ body.show-phones-menu .header-mobile__phone:before {
   margin-bottom: 14px; }
 
 .contact-props__info {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 20px; }
+  @media (min-width: 550px) {
+    .contact-props__info {
+      margin-bottom: 14px; } }
 
 .contact-props b {
   font-size: 16px; }
+
+.advantages {
+  background: #F7F7F7;
+  padding: 28px 0; }
+  @media (min-width: 550px) {
+    .advantages {
+      padding: 22px 0; } }
+  .advantages__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-left: -11px;
+    margin-right: -11px; }
+  .advantages__item {
+    width: 100%;
+    padding: 0 22px;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px; }
+    @media (min-width: 550px) {
+      .advantages__item {
+        width: 25%;
+        margin-bottom: 0; } }
+  .advantages__image {
+    width: 50px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 20px; }
+    .advantages__image img {
+      max-width: 100%;
+      max-height: 100%; }
+  .advantages__card {
+    font-size: 16px;
+    width: 100%; }
+  .advantages__header {
+    margin-bottom: 10px;
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 19px; }
+  .advantages__info {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px; }
