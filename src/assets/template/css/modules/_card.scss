@@ -1,0 +1,22 @@
+.card{
+  padding: 14px 0;
+  &__grid{
+    display: flex;
+  }
+  &__sidebar{
+    flex-shrink: 0;
+    width: 270px;
+    display: none;
+    margin-right: 20px;
+    @media ($bp-larger-than-tablet) {
+      display: block;
+    }
+  }
+  &__content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+}

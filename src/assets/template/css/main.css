@@ -2330,3 +2330,26 @@ body.show-phones-menu .header-mobile__phone-arrow:before {
 
 .contact-props b {
   font-size: 16px; }
+
+.card {
+  padding: 14px 0; }
+  .card__grid {
+    display: -ms-flexbox;
+    display: flex; }
+  .card__sidebar {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 270px;
+    display: none;
+    margin-right: 20px; }
+    @media (min-width: 750px) {
+      .card__sidebar {
+        display: block; } }
+  .card__content {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
