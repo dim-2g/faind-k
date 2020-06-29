@@ -82,28 +82,34 @@ ymaps.ready(init);
                 '<div class="popover__address">$[properties.balloonHeader]</div>'
             ),
 
+            console.log(mapData.placemarks);
 
-        placemark = new ymaps.Placemark(
-            mapData.coords, {
-                balloonHeader: mapData.header
-             }, { 
-                balloonShadow: false,
-                balloonLayout: MyBalloonLayout,
-                balloonContentLayout: MyBalloonContentLayout,
-                balloonPanelMaxMapArea: 0,
-                hideIconOnBalloonOpen: false,
 
-                iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: '/assets/template/images/map-marker.png',
-                // Размеры метки.
-                iconImageSize: [42, 45],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
-                iconImageOffset: [-21, -45],
-                pane: 'balloon'
-             });
-        map.geoObjects.add(placemark);
+        for (var item of mapData.placemarks) {
+            var placemark = new ymaps.Placemark(
+                item.coords, {
+                    balloonHeader: item.header
+                }, {
+                    balloonShadow: false,
+                    balloonLayout: MyBalloonLayout,
+                    balloonContentLayout: MyBalloonContentLayout,
+                    balloonPanelMaxMapArea: 0,
+                    hideIconOnBalloonOpen: false,
+
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: item.marker,
+                    // Размеры метки.
+                    iconImageSize: [42, 45],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [-21, -45],
+                    pane: 'balloon'
+                });
+            map.geoObjects.add(placemark);
+        };
+
+
         //placemark.balloon.open();
 
 
@@ -111,6 +117,12 @@ ymaps.ready(init);
         //hideMapOnMobile();
         //map.controls.add('zoomControl');
         // Если карта есть, то выставляем новый центр карты и меняем данные и позицию метки в соответствии с найденным адресом.
+
+        map.events.once('click', function () {
+            map.behaviors
+                .enable('scrollZoom')
+                .enable('multiTouch');
+        });
 
 }
 

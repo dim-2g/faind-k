@@ -1,4 +1,10 @@
 .articles{
+  .header-styled{
+    margin: 0 0 14px;
+    @media ($bp-larger-than-phablet) {
+      margin: 0 0 20px;
+    }
+  }
   &__list{
     display: flex;
     flex-wrap: wrap;
@@ -56,5 +62,45 @@
     font-size: 14px;
     line-height: 16px;
     padding-right: 2px;
+  }
+}
+
+.pagination{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 0px;
+  @media ($bp-larger-than-phablet) {
+    margin-top: -9px;
+  }
+  li{
+    margin-right: 25px;
+    padding: 0;
+    display: inline-block;
+    @media ($bp-larger-than-phablet) {
+      margin: 0 13px;
+    }
+    a{
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration: none;
+      &:hover{
+        text-decoration: none;
+        color: $red;
+      }
+    }
+    &.active{
+      a{
+        font-weight: bold;
+        color: $red;
+      }
+    }
+  }
+}
+#mse2_pagination{
+  margin-bottom: 20px;
+  @media ($bp-larger-than-phablet) {
+    margin-bottom: 53px;
   }
 }

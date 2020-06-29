@@ -77,9 +77,10 @@ button{
 }
 
 .breadcrumbs{
-  padding: 2px 0 11px;
-  display: none;
+  padding: 13px 0 15px;
+  //display: none;
   @media ($bp-larger-than-phablet) {
+    padding: 17px 0 25px;
     display: block;
   }
   ul{
@@ -125,6 +126,24 @@ button{
   }
 }
 
+.header-styled {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+  margin: 0 0 14px;
+  @media ($bp-larger-than-phablet) {
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0 0 33px;
+  }
+  > span{
+    position: relative;
+    padding-right: 42px;
+    background: transparent url('/assets/template/images/dots.svg') 100% 58% no-repeat;
+  }
+}
 .page-header{
   font-family: Roboto;
   font-style: normal;
@@ -197,7 +216,7 @@ button{
   p{
     font-weight: 300;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 130%;
     @media ($bp-larger-than-desktop) {
       line-height: 20px;
     }
@@ -208,7 +227,7 @@ button{
     line-height: 16px;
     list-style-type: none;
     @media ($bp-larger-than-phablet) {
-      line-height: 12px;
+      line-height: 16px;
     }
     li{
       padding-left: 12px;
@@ -345,6 +364,7 @@ button{
     justify-content: center;
     @media ($bp-larger-than-tablet) {
       margin-left: 15px;
+      padding-bottom: 6px;
     }
   }
   &__header{
@@ -370,6 +390,7 @@ button{
     display: none;
     @media ($bp-larger-than-tablet) {
       display: block;
+      padding-top: 2px;
     }
   }
 }
@@ -443,6 +464,12 @@ button{
     display: none;
     @media ($bp-larger-than-tablet) {
       display: block;
+    }
+    .btn-o{
+      height: 35px;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
     }
   }
 }
@@ -822,7 +849,7 @@ body.show-phones-menu{
   justify-content: space-between;
   width: 100%;
   & > li{
-    width: 275px;
+    width: 268px;
   }
   li{
     margin: 0;
@@ -858,7 +885,7 @@ body.show-phones-menu{
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
-        z-index: 1;
+        z-index: 10;
       }
       .topmenu__arrow{
         &:before{
@@ -898,6 +925,9 @@ body.show-phones-menu{
     justify-content: center;
     transition: $cubic02;
     position: relative;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
     &:hover{
       text-decoration: none;
       color: #d4d4d4;
@@ -925,7 +955,7 @@ body.show-phones-menu{
 .bottom-line{
   background: $dark-red;
   &__grid{
-    padding: 14px 0;
+    padding: 16px 0 14px;
     align-items: center;
     display: flex;
     font-weight: 300;
@@ -1015,9 +1045,14 @@ body.show-phones-menu{
   &__body{
     display: flex;
     align-items: center;
-    height: 112px;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    padding-bottom: 20px;
     @media ($bp-larger-than-tablet) {
+      flex-wrap: nowrap;
+      padding-top: 0;
+      padding-bottom: 0;
       height: 112px;
     }
   }
@@ -1038,10 +1073,12 @@ body.show-phones-menu{
 
     }
     @media ($bp-larger-than-desktop) {
-      margin-right: 0px;
+      margin-right: 0;
       width: 100%;
       flex-direction: row;
       justify-content: center;
+      padding-top: 6px;
+      padding-right: 50px;
     }
   }
   &__phone{
@@ -1051,9 +1088,11 @@ body.show-phones-menu{
     color: #1D1D1D;
     position: relative;
     transition: $cubic02;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 5px;
     @media ($bp-larger-than-phablet) {
+      margin-bottom: 0;
       font-size: 18px;
       line-height: 21px;
     }
@@ -1132,15 +1171,37 @@ body.show-phones-menu{
     }
   }
   &__contacts{
-    width: 260px;
+    width: 222px;
     flex-shrink: 0;
-    display: none;
+    //display: none;
     font-weight: 300;
     font-size: 14px;
     line-height: 16px;
     color: #1D1D1D;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-top: 18px;
     @media ($bp-larger-than-tablet) {
+      padding-top: 0;
+      margin-top: 0;
       display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &__address{
+    text-align: center;
+    margin-bottom: 6px;
+    @media ($bp-larger-than-tablet) {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+  &__req{
+    text-align: center;
+    @media ($bp-larger-than-tablet) {
+      text-align: left;
     }
   }
 }
@@ -1152,8 +1213,15 @@ body.show-phones-menu{
     //margin-bottom: 0;
   }
   &__image{
+    margin-right: 7px;
+    margin-top: -9px;
+    @media ($bp-larger-than-phablet) {
+      margin-top: 0;
+      margin-right: 0;
+      width: auto;
+    }
     img{
-      max-height: 34px;
+      max-height: 40px;
       margin-top: 5px;
       @media ($bp-larger-than-phablet) {
         margin-top: 0;
@@ -1175,11 +1243,13 @@ body.show-phones-menu{
     font-size: 13px;
     line-height: 16px;
     color: #000000;
+    padding-bottom: 6px;
     @media ($bp-larger-than-iphone6) {
       font-size: 14px;
       line-height: 18px;
     }
     @media ($bp-larger-than-phablet) {
+      padding-bottom: 0;
       font-size: 24px;
       line-height: 28px;
       margin-bottom: 0;

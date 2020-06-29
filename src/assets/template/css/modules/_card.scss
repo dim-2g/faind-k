@@ -1,5 +1,14 @@
 .card{
-  padding: 14px 0;
+  padding: 0 0 29px;
+  @media ($bp-larger-than-phablet) {
+    padding: 14px 0 45px;
+  }
+  .header-styled{
+    font-size: 18px;
+    @media ($bp-larger-than-phablet) {
+      font-size: 22px;
+    }
+  }
   &__grid{
     display: flex;
   }
@@ -8,7 +17,7 @@
     width: 270px;
     display: none;
     margin-right: 25px;
-    @media ($bp-larger-than-tablet) {
+    @media ($bp-larger-than-desktop) {
       display: block;
     }
   }
@@ -17,19 +26,80 @@
     //margin-bottom: 40px;
   }
   &__header{
-    border-bottom: 2px solid #F7F7F7;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 18px;
+    margin-bottom: 0;
+    @media ($bp-larger-than-phablet) {
+      border-bottom: 2px solid #F7F7F7;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
     h1{
       margin-bottom: 0;
     }
   }
-
+  .consultation-form{
+    padding: 19px 14px 19px;
+    @media ($bp-larger-than-phablet) {
+      padding: 15px 20px 19px;
+    }
+    &__header {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 18px;
+      @media ($bp-larger-than-phablet) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+    &__items{
+      @media ($bp-larger-than-phablet) {
+        margin-bottom: 11px;
+      }
+    }
+    &__policy {
+      font-size: 12px;
+      line-height: 120%;
+      @media ($bp-larger-than-phablet) {
+        font-size: 11px;
+      }
+    }
+    &__grid{
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    &__fields{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    &__actions{
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-top: 20px;
+      @media ($bp-larger-than-phablet) {
+        margin-top: 0;
+      }
+    }
+    &__items{
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    &__item{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    &__actions .btn {
+      margin-bottom: 12px;
+      @media ($bp-larger-than-phablet) {
+        margin-bottom: 17px;
+      }
+    }
+  }
 }
 .card-info{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
   @media ($bp-larger-than-phablet) {
     align-items: flex-start;
   }
@@ -45,30 +115,39 @@
   }
   &__right{
     width: 100%;
-    @media ($bp-larger-than-tablet) {
+    @media ($bp-larger-than-desktop) {
       padding-left: 20px;
     }
   }
   h3{
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 6px;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #1D1D1D;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 15px;
+    }
   }
   p{
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
     color: #1D1D1D;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 15px;
+    }
   }
 }
 
 .card-images{
   margin-bottom: 34px;
   width: 290px;
+  @media ($bp-larger-than-iphone6) {
+    width: 345px;
+  }
   @media ($bp-larger-than-mobile) {
     width: 309px;
   }
@@ -127,27 +206,43 @@
     }
     .slick-dots li button::before{
       content: "";
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       border: 1px solid $dark-red;
       background: #fff;
       display: inline-block;
       opacity: 1;
       transition: $cubic02;
+      @media ($bp-larger-than-phablet) {
+        width: 10px;
+        height: 10px;
+      }
     }
     .slick-dots li.slick-active button::before{
       background: $dark-red;
     }
     .slick-dots{
-      bottom: 10px;
+      bottom: 4px;
+      @media ($bp-larger-than-phablet) {
+        bottom: 10px;
+      }
+      li{
+        margin: 0;
+        @media ($bp-larger-than-phablet) {
+          margin: 0 5px;
+        }
+      }
     }
   }
   &__photo{
-    height: 310px;
+    height: 337px;
     display: flex !important;
     align-items: center;
     justify-content: center;
+    @media ($bp-larger-than-phablet) {
+      height: 310px;
+    }
   }
   &__prevs{
     display: none;
@@ -189,10 +284,11 @@
 }
 
 .order-form{
-  margin-top: 20px;
   background: #F7F7F7;
-  padding: 21px 20px 25px;
+  padding: 17px 20px 25px;
   @media ($bp-larger-than-phablet) {
+    padding: 21px 20px 25px;
+    margin-top: 20px;
     border-radius: 10px;
   }
   &__header{
@@ -201,7 +297,10 @@
     line-height: 17px;
     text-transform: uppercase;
     color: #7C2629;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 18px;
+    }
   }
   .input{
     background: #FFFFFF;
@@ -223,7 +322,10 @@
   }
   &__row{
     & + .order-form__row{
-      margin-top: 20px;
+      margin-top: 17px;
+      @media ($bp-larger-than-phablet) {
+        margin-top: 20px;
+      }
     }
   }
   &__items{
@@ -278,6 +380,10 @@
       width: 172px;
       margin-bottom: 0;
     }
+    .btn{
+      text-transform: uppercase;
+      font-size: 12px;
+    }
   }
   &__privacy{
     width: 100%;
@@ -310,7 +416,7 @@
     display: none;
   }
   .btn-o{
-    max-width: 309px;
+    max-width: 345px;
     margin-left: auto;
     margin-right: auto;
     @media ($bp-larger-than-phablet) {
@@ -320,21 +426,31 @@
   }
 }
 .similar{
+  margin-bottom: 22px;
+  @media ($bp-larger-than-phablet) {
+    margin-bottom: 17px;
+  }
   &__header{
     font-weight: normal;
     font-size: 22px;
     line-height: 26px;
     color: #424242;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 20px;
+    }
   }
   &__list{
     display: flex;
+    margin-left: -9px;
+    margin-right: -9px;
+    flex-wrap: wrap;
   }
   &__item{
     width: 50%;
     padding: 0 6px 12px;
     @media ($bp-larger-than-phablet) {
-      padding: 0 10px 22px;
+      padding: 0 9px 22px;
     }
     @media ($bp-larger-than-desktop) {
       width: 33.33%;
@@ -343,16 +459,92 @@
       width: 25%;
     }
     .catalog-card-box{
-      width: 200px;
-      height: 200px;
+      max-width: 200px;
+      height: 164px;
+      @media ($bp-larger-than-phablet) {
+        height: 200px;
+      }
       &__image{
-        height: 125px;
+        height: 138px;
       }
       &__name{
-        font-size: 13px;
+        height: 38px;
+        font-size: 12px;
         font-weight: 300;
+        line-height: 100%;
+        @media ($bp-larger-than-phablet) {
+          line-height: 120%;
+          font-size: 13px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
       }
     }
 
+  }
+}
+
+.card-text{
+  &.stext {
+    padding-right: 0;
+    margin-bottom: 10px;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 44px;
+    }
+    ul{
+      margin-bottom: 20px;
+      li {
+        margin-bottom: 9px;
+        padding-left: 17px;
+        &:before{
+          width: 7px;
+          height: 4px;
+          border-left: 1px solid $dark-red;
+          border-bottom: 1px solid $dark-red;
+          background-color: transparent;
+          transform: rotate(-45deg);
+          border-radius: 0;
+        }
+      }
+    }
+    p {
+      margin-bottom: 20px;
+      line-height: 135%;
+
+      + ul {
+        margin-top: -5px;
+      }
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.card-bottom-text{
+  background: #F7F7F7;
+  padding: 30px 0 10px;
+  @media ($bp-larger-than-phablet) {
+    padding: 32px 0 10px;
+  }
+  .header-styled{
+    margin: 0 0 20px;
+    @media ($bp-larger-than-phablet) {
+      font-size: 22px;
+    }
+  }
+  &__body{
+    padding-right: 0;
+    p{
+      font-weight: 300;
+      text-align: justify;
+      margin-bottom: 6px;
+      font-size: 13px;
+      line-height: 15px;
+      @media ($bp-larger-than-phablet) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
   }
 }

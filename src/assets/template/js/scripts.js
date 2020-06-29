@@ -138,7 +138,7 @@ $(function() {
     });
 
     //инициализация верхнего слайдера
-    //initMainSlider();
+    initMainSlider();
     //инициализация слайдера у товара
     //initProductSlider();
     //инициализация слайдера похожих статей
@@ -201,14 +201,16 @@ var initXtab = function() {
     }, 100);
 };
 
-
+/*
 var isInitMainSlider = false;
 var initMainSlider = function() {
     var selector = '.main-slider-js';
     $(selector).owlCarousel({
         loop: true,
-        margin: 20,
+        margin: 0,
         responsiveClass:true,
+        dotsClass: 'owl-dots container',
+        dotsContainer: '#carousel-custom-dots',
         responsive:{
             0:{
                 items: 1,
@@ -217,6 +219,26 @@ var initMainSlider = function() {
             }
         }
     });
+};
+
+ */
+
+
+var slider_main = false;
+initMainSlider  = function(selector = '.main-slider-js') {
+    console.log('start');
+    if (!slider_main) {
+        $(selector).slick({
+            'autoplay': false,
+            'arrows': false,
+            'dots': true,
+            'slidesToShow': 1,
+            'slidesToScroll': 1,
+            'appendDots': $('.main-slider-dots__items'),
+            'fade': false
+        });
+        slider_main = true;
+    }
 };
 
 var initProductSlider = function () {

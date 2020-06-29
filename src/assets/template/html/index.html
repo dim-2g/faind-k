@@ -1,8 +1,52 @@
 //= include/header.html
 
+<div class="main-slider">
+    <div class="main-slider__items owl-carousel main-slider-js">
+        <div class="main-slider__item" style="background-image: url('/assets/template/images/slider/1.jpg')">
+            <div class="container">
+                <div class="main-slider__panel">
+                    <div class="main-slider__text">
+                        Упаковка из гофрокартона
+                        для любых товаров<br />
+                        на заказ
+                    </div>
+                    <div class="main-slider__button">
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-slider__item" style="background-image: url('/assets/template/images/slider/2.jpg')">
+            <div class="container">
+                <div class="main-slider__panel">
+                    <div class="main-slider__text">
+                        Упаковка из гофрокартона
+                        для любых товаров<br />
+                        на заказ
+                    </div>
+                    <div class="main-slider__button">
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                    <div class="main-slider__dots owl-dots">
+                        <span class="owl-dot"></span>
+                        <span class="owl-dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-slider-dots">
+        <div class="container">
+            <div class="main-slider-dots__inner">
+                <div class="main-slider-dots__items"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="categories">
     <div class="container">
-        <h2 class="page-header"><span>Популярные категории <span class="page-header__dots"></span></span></h2>
+        <h2 class="header-styled"><span>Популярные категории</span></h2>
         <div class="catalog__list">
             <div class="catalog__item">
                 <a href="#" class="catalog-card" style="background-image: url('/assets/template/images/catalog/6.jpg')">
@@ -66,7 +110,7 @@
 
 <div class="advantages">
     <div class="container">
-        <h2 class="page-header"><span>Преимущества работы с нами <span class="page-header__dots"></span></span></h2>
+        <h2 class="header-styled"><span>Преимущества работы с нами</span></h2>
         <div class="advantages__list">
             <div class="advantages__item">
                 <div class="advantages__image">
@@ -125,11 +169,185 @@
     </div>
 </div>
 
+<div class="main-form">
+    <div class="main-form__bg">
+        <div class="container">
+            <div class="main-form__inner">
+
+                <div class="main-form__box">
+                    <h2 class="header-styled"><span>Рассчитать стоимость заказа</span></h2>
+                    <form action="">
+                    <div class="main-form__row">
+
+                        <div class="main-form__items">
+
+                            <div class="main-form__item main-form__item-param">
+                                <div class="main-form__label">
+                                    Габариты (см)
+                                </div>
+                                <input type="text" placeholder="Ширина" class="input" />
+                            </div>
+                            <div class="main-form__multy">x</div>
+                            <div class="main-form__item main-form__item-param">
+                                <div class="main-form__label">
+                                    &nbsp;
+                                </div>
+                                <input type="text" placeholder="Глубина" class="input" />
+                            </div>
+                            <div class="main-form__multy">
+                                x
+                            </div>
+                            
+                            <div class="main-form__item main-form__item-param">
+                                <div class="main-form__label">
+                                    &nbsp;
+                                </div>
+                                <input type="text" placeholder="Высота" class="input" />
+                            </div>
+                            <div class="main-form__item main-form__item-marka">
+                                <div class="main-form__label">
+                                    Марка картона
+                                </div>
+                                <select name="marka" class="styler">
+                                    <option>Т-21</option>
+                                    <option>Т-22</option>
+                                    <option>Т-100</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="main-form__row main-form__row-mobile">
+                        <div class="main-form__items">
+                            <div class="main-form__item">
+                                <div class="main-form__label">
+                                    Марка картона
+                                </div>
+                                <select name="marka" class="styler">
+                                    <option>Т-21</option>
+                                    <option>Т-22</option>
+                                    <option>Т-100</option>
+                                </select>
+                            </div>
+                            <div class="main-form__item">
+                                <div class="main-form__label">
+                                    Нанесение печати
+                                </div>
+                                <select name="print" class="styler" disabled>
+                                    <option>Без печати</option>
+                                    <option>С печатью</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-form__row main-form__row-two">
+
+                        <div class="main-form__items">
+
+                            <div class="main-form__item">
+                                <div class="main-form__label">
+                                    Верхний слой
+                                </div>
+                                <div class="main-form__radios">
+                                    <label class="radio-custom" style="">
+                                        <input name="layer" type="radio" class="radio-custom__input"
+                                               value="1"  checked                            >
+                                        <span class="radio-custom__pseudo"></span>
+                                        <span class="radio-custom__label"> Бурый</span>
+                                    </label>
+                                    <label class="radio-custom" style="">
+                                        <input name="layer" type="radio" class="radio-custom__input"
+                                               value="2"                             >
+                                        <span class="radio-custom__pseudo"></span>
+                                        <span class="radio-custom__label"> Белый</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="main-form__item">
+                                <div class="main-form__label">
+                                    Вырубка
+                                </div>
+                                <div class="main-form__radios">
+                                    <label class="radio-custom" style="">
+                                        <input name="felling" type="radio" class="radio-custom__input"
+                                               value="1"  checked                            >
+                                        <span class="radio-custom__pseudo"></span>
+                                        <span class="radio-custom__label"> Простая</span>
+                                    </label>
+                                    <label class="radio-custom" style="">
+                                        <input name="felling" type="radio" class="radio-custom__input"
+                                               value="2"                             >
+                                        <span class="radio-custom__pseudo"></span>
+                                        <span class="radio-custom__label"> Сложная</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="main-form__item main-form__item-print">
+                                <div class="main-form__label">
+                                    Нанесение печати
+                                </div>
+                                <select name="print" class="styler">
+                                    <option>Без печати</option>
+                                    <option>С печатью</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-form__row">
+                        <div class="main-form__columns">
+                            <div class="main-form__column">
+                                <div class="main-form__row">
+                                    <div class="main-form__item">
+                                        <input type="text" placeholder="ФИО*" class="input" />
+                                    </div>
+                                </div>
+                                <div class="main-form__row">
+                                    <div class="main-form__item">
+                                        <input type="text" placeholder="Телефон*" class="input" data-mask="+7(999)999-99-99" />
+                                    </div>
+                                </div>
+                                <div class="main-form__row">
+                                    <div class="main-form__item">
+                                        <input type="text" placeholder="Email" class="input" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-form__column">
+                                <div class="main-form__row">
+                                    <div class="main-form__item">
+                                        <input type="text" placeholder="Тираж" class="input" />
+                                    </div>
+                                </div>
+                                <div class="main-form__row">
+                                    <div class="main-form__actions">
+                                        <div class="main-form__button">
+                                            <button class="btn" type="submit">Рассчитать стоимость</button>
+                                        </div>
+                                        <div class="main-form__privacy">
+                                            Нажимая на кнопку, вы даете согласие
+                                            на обработку персональных данных
+                                            в соответствии с <a href="#">политикой конфиденциальности</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <div class="about">
     <div class="container">
         <div class="about__list">
             <div class="about__text">
-                <h2 class="page-header"><span>О компании <span class="page-header__dots"></span></span></h2>
+                <h2 class="header-styled"><span>О компании</span></h2>
                 <p>ЗАО "Файнд-К" было основано в 1998 году на базе коммерческих отделов ТОО "Файнд" и ОАО "АтомЭнергоСтройМонтаж", которые выполняли работы по ремонту и реконструкции Ленинградской атомной электростанции и других объектов.</p>
                 <p>Со дня основания компании ЗАО "Файнд-К" основным видом деятельности является оптовая поставка упаковки из гофрированного картона. За более чем десятилетнее существование, компания завоевала заметное место на рынке гофрокартона Санкт-Петербурга.</p>
                 <p>С 2007 года ЗАО "Файнд-К" представляет интересы израильского завода "Dor Group", производящего гидрофобные добавки в крахмальные клеи, используемые при производстве гофрокартона.</p>
@@ -150,17 +368,17 @@
                 </div>
             </div>
             <div class="about__image">
-                <img src="/assets/template/images/catalog/6.jpg" alt="">
+                <img src="/assets/template/images/main-about.jpg" alt="">
             </div>
         </div>
     </div>
 </div>
 
-<div class="catalog-bottom-text">
+<div class="main-bottom-text">
     <div class="container">
-        <div class="catalog-bottom-text__grid">
-            <div class="catalog-bottom-text__body stext">
-                <h2 class="page-header"><span>SEO - текст <span class="page-header__dots"></span></span></h2>
+        <div class="main-bottom-text__grid">
+            <div class="main-bottom-text__body stext">
+                <h2 class="header-styled"><span>SEO - текст</span></h2>
                 <p>ЗАО "Файнд-К" было основано в 1998 году на базе коммерческих отделов ТОО "Файнд" и ОАО "АтомЭнергоСтройМонтаж", которые выполняли работы по ремонту и реконструкции Ленинградской атомной электростанции и других объектов.
                     Со дня основания компании ЗАО "Файнд-К" основным видом деятельности является оптовая поставка упаковки из гофрированного картона. За более чем десятилетнее существование, компания завоевала заметное место на рынке гофрокартона Санкт-Петербурга.
                     С 2007 года ЗАО "Файнд-К" представляет интересы израильского завода "Dor Group", производящего гидрофобные добавки в крахмальные клеи, используемые при производстве гофрокартона. Со дня основания компании ЗАО "Файнд-К" основным видом деятельности является оптовая поставка упаковки из гофрированного картона. За более чем десятилетнее существование, компания завоевала заметное место на рынке гофрокартона Санкт-Петербурга.

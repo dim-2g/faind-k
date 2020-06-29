@@ -147,23 +147,19 @@
             <h2>Верстка страниц</h2>
             <ul>
                 <li><a href="/index.html">Главная страница</a></li>
-                <li><a href="/catalog.html">Каталог</a></li>
-                <li><a href="/product.html">Карточка товара</a> всплывающее окно</li>
-                <li><a href="/cart.html">Корзина</a></li>
+                <li><a href="/catalog.html">Каталог товаров под заказ</a></li>
+                <li><a href="/catalog-cartons.html">Каталог товаров под заказ. Коробки самосборные</a></li>
+                <li><a href="/card.html">Карточка товаров под заказ</a></li>
                 <li><a href="/contacts.html">Контакты</a></li>
+                <li><a href="/catalog-table.html">Каталог готовой продукци</a></li>
                 <li><a href="/articles.html">Каталог статей</a></li>
-                <li><a href="/article.html">Карточка статьи</a></li>
-                <li><a href="/company.html">О компании</a> !!! преимущества поправить, проверить адаптив</li>
-                <li><a href="/text.html">Текстовая страница (доставка, ПК и т.д.</a></li>
-                <li><a href="/search.html">Результаты поиска</a></li>
-                <li><a href="/404.html">404</a></li>
-                <li><a href="/services.html">Услуги</a></li>
+                <li><a href="/article.html">Статья</a></li>
             </ul>
             <h2>Всплывающие окна</h2>
             <ul>
-                <li><a href="#thankyou" data-fancybox="">Спасибо за Ваш заказ</a></li>
-                <li><a href="#oneclick" data-fancybox="">Купить в 1 клик</a></li>
-                <li><a href="#addproduct" data-fancybox="">Товар добавлен в корзину</a></li>
+                <li><a href="#order" data-fancybox="">Заказ по вашим размерам</a></li>
+                <li><a href="#callback" data-fancybox="">Заказать звонок</a></li>
+                <li><a href="#buy" data-fancybox="">Купить готовую продукцию</a></li>
             </ul>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
@@ -174,84 +170,167 @@
 
 
 <div style="display: none;">
-    <div id="thankyou" class="thankyou-popup">
-        <div class="thankyou-popup__header">
-            Спасибо за Ваш заказ!
-        </div>
-        <div class="thankyou-popup__body">
-            Наш менеджер свяжется с вами в течение <nobr>30 минут</nobr> в рабочее время.<br />
-            Мы работаем с понедельника по пятницу с 09.00 до 18.00.
-        </div>
-    </div>
-
-    <div id="addproduct" class="addproduct-popup">
-        <div class="addproduct-popup__text">
-            <div class="addproduct-popup__name">Стиральная машина Bosch Serie 2</div>
-            успешно добавлен(а) в корзину
-        </div>
-        <div class="addproduct-popup__actions">
-            <a href="" class="btn-o" data-fancybox-close="">Продолжить покупки</a>
-            <a href="/cart.html" class="btn">Оформить заказ</a>
-        </div>
-    </div>
-
-    <div id="oneclick" class="oneclick-popup">
-        <div class="oneclick-popup__header">Купить в 1 клик</div>
-        <div class="oneclick-popup__body">
-            <div class="oneclick-popup__name">Стиральная машина Bosch Serie 2</div>
-            <div class="oneclick-popup__grid">
-                <div class="oneclick-popup__left">
-                    <div class="oneclick-popup__image" style="background-image: url('/assets/template/images/products/product-2.png')">
-
+    <div id="order" class="order-popup">
+        <div class="order-form-popup">
+            <div class="order-form-popup__header">заказ по вашим размерам</div>
+            <div class="order-form-popup__row">
+                <input type="text" placeholder="ФИО*" class="input" />
+            </div>
+            <div class="order-form-popup__row">
+                <div class="order-form-popup__items">
+                    <div class="order-form-popup__item">
+                        <input type="text" placeholder="Телефон*" class="input" data-mask="+7(999)999-99-99" />
                     </div>
-                    <div class="oneclick-popup__info">
-                        Чтобы оформить заказ, заполните форму. В течение 30 минут (в рабочее время) с вами
-                        свяжется менеджер и уточнит детали заказа, а также время доставки.
+                    <div class="order-form-popup__item">
+                        <input type="text" placeholder="Email" class="input" />
                     </div>
                 </div>
-                <div class="oneclick-popup__right">
-                    <div class="oneclick-form">
-                        <form action="">
-                            <div class="oneclick-form__item">
-                                <div class="oneclick-form__label">Имя*</div>
-                                <div class="oneclick-form__input">
-                                    <input type="text" name="name" placeholder="">
-                                </div>
-                            </div>
-                            <div class="oneclick-form__item">
-                                <div class="oneclick-form__label">Телефон*</div>
-                                <div class="oneclick-form__input">
-                                    <input type="text" name="phone" placeholder="" data-mask="+7 (999) 999-99-99">
-                                </div>
-                            </div>
-                            <div class="oneclick-form__item">
-                                <div class="oneclick-form__label">Email</div>
-                                <div class="oneclick-form__input">
-                                    <input type="text" name="email" placeholder="">
-                                </div>
-                            </div>
-                            <div class="oneclick-form__item oneclick-form__item--address">
-                                <div class="oneclick-form__label">Адрес доставки <span class="oneclick-form__hint">(при необходимости)</span></div>
-                                <div class="oneclick-form__input">
-                                    <input type="text" name="street" placeholder="">
-                                </div>
-                            </div>
-                            <div class="oneclick-form__button">
-                                <button class="btn">Купить</button>
-                            </div>
-                            <div class="oneclick-form__privacy">
-                                Нажимая на кнопку, Вы даете согласие на обработку персональных данных и соглашаюсь
-                                с <a href="">Политикой конфиденциальности</a>
-                            </div>
+            </div>
+            <div class="order-form-popup__row">
+                <div class="order-form-popup__label">
+                    Габариты (см)
+                </div>
+                <div class="order-form-popup__items">
+                    <div class="order-form-popup__item">
+                        <input type="text" placeholder="Ширина" class="input" />
+                    </div>
+                    <div class="order-form-popup__multy">x</div>
+                    <div class="order-form-popup__item">
+                        <input type="text" placeholder="Глубина" class="input" />
+                    </div>
+                    <div class="order-form-popup__multy">x</div>
+                    <div class="order-form-popup__item">
+                        <input type="text" placeholder="Высота" class="input" />
+                    </div>
+                </div>
+            </div>
+            <div class="order-form-popup__row">
 
-                        </form>
+                <div class="order-form-popup__items">
+                    <div class="order-form-popup__item order-form-popup__item--count">
+                        <div class="order-form-popup__label">
+                            Количество
+                        </div>
+                        <input type="text" placeholder="Кол-во" class="input" value="10" />
+                    </div>
+                    <div class="order-form-popup__item">
+                        <div class="order-form-popup__label">
+                            Марка картона
+                        </div>
+                        <select name="" class="styler">
+                            <option>Т-21</option>
+                            <option>Т-22</option>
+                            <option>Т-100</option>
+                        </select>
+                    </div>
+                    <div class="order-form-popup__item">
+                        <div class="order-form-popup__label">
+                            Нанесение печати
+                        </div>
+                        <select name="" class="styler">
+                            <option>Без печати</option>
+                            <option>С печатью</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="order-form-popup__row">
+                <div class="order-form-popup__actions">
+                    <div class="order-form-popup__button">
+                        <button class="btn">Заказать</button>
+                    </div>
+                    <div class="order-form-popup__privacy">
+                        Нажимая на кнопку, вы даете согласие
+                        на обработку персональных данных
+                        в соответствии с <a href="#">политикой конфиденциальности</a>
                     </div>
                 </div>
             </div>
 
-            <div class="oneclick-form__privacy-mobile">
-                Нажимая на кнопку, Вы даете согласие на обработку персональных данных и соглашаюсь
-                с <a href="">Политикой конфиденциальности</a>
+        </div>
+    </div>
+
+    <div id="callback" class="callback-popup">
+        <div class="callback-form-popup">
+            <div class="callback-form-popup__header">Заказать звонок</div>
+            <div class="callback-form-popup__row">
+                <input type="text" placeholder="ФИО*" class="input" />
+            </div>
+            <div class="callback-form-popup__row">
+                <div class="callback-form-popup__items">
+                    <div class="callback-form-popup__item">
+                        <input type="text" placeholder="Телефон*" class="input" data-mask="+7(999)999-99-99" />
+                    </div>
+                    <div class="callback-form-popup__item">
+                        <input type="text" placeholder="Email" class="input" />
+                    </div>
+                </div>
+            </div>
+            <div class="callback-form-popup__row">
+                <div class="callback-form-popup__actions">
+                    <div class="callback-form-popup__button">
+                        <button class="btn">Заказать</button>
+                    </div>
+                    <div class="callback-form-popup__privacy">
+                        Нажимая на кнопку, вы даете согласие
+                        на обработку персональных данных
+                        в соответствии с <a href="#">политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="buy" class="buy-popup">
+        <div class="buy-form-popup">
+            <div class="buy-form-popup__header">Купить готовую продукцию</div>
+            <div class="buy-form-popup__row">
+                <input type="text" placeholder="ФИО*" class="input" />
+            </div>
+            <div class="buy-form-popup__row">
+                <div class="buy-form-popup__items">
+                    <div class="buy-form-popup__item">
+                        <input type="text" placeholder="Телефон*" class="input" data-mask="+7(999)999-99-99" />
+                    </div>
+                    <div class="buy-form-popup__item">
+                        <input type="text" placeholder="Email" class="input" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="buy-form-popup__row">
+
+                <div class="buy-form-popup__items">
+                    <div class="buy-form-popup__item">
+                        <div class="buy-form-popup__product">
+                            <div class="buy-form-popup__image">
+                                <img src="/assets/template/images/catalog/1.png" alt="">
+                            </div>
+                            <div class="buy-form-popup__name">
+                                Гофрированный картон
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buy-form-popup__item buy-form-popup__item--count">
+                        <div class="buy-form-popup__label">
+                            Количество
+                        </div>
+                        <input type="text" placeholder="Кол-во" class="input" value="10" />
+                    </div>
+                </div>
+            </div>
+            <div class="buy-form-popup__row">
+                <div class="buy-form-popup__actions">
+                    <div class="buy-form-popup__button">
+                        <button class="btn">Заказать</button>
+                    </div>
+                    <div class="buy-form-popup__privacy">
+                        Нажимая на кнопку, вы даете согласие
+                        на обработку персональных данных
+                        в соответствии с <a href="#">политикой конфиденциальности</a>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -285,11 +364,15 @@
                 <a href="tel:88125917100" class="footer__phone">8 (812) 591 71 00</a>
             </div>
             <div class="footer__contacts">
-                Адрес: 196158, Санкт-Петербург,<br />
-                Б.Сампсониевский пр., д. 82, оф. 1<br />
-                ИНН: 780000000000,<br />
-                ОГРН 0000000000000000000<br />
-                Email: info@find-k.ru
+                <div class="footer__address">
+                    Адрес: 196158, Санкт-Петербург,<br />
+                    Б.Сампсониевский пр., д. 82, оф. 1
+                </div>
+                <div class="footer__req">
+                    ИНН: 780000000000,<br />
+                    ОГРН 0000000000000000000<br />
+                    Email: info@find-k.ru
+                </div>
             </div>
         </div>
     </div>
